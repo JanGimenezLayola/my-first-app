@@ -12,7 +12,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/database-name', {
+mongoose.connect('mongodb://localhost/expressRecipes', {
   keepAlive: true,
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
