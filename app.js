@@ -12,6 +12,12 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+mongoose.connect('mongodb://localhost/database-name', {
+  keepAlive: true,
+  useNewUrlParser: true,
+  reconnectTries: Number.MAX_VALUE
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
